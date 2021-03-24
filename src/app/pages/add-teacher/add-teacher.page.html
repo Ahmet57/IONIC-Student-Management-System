@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add Teacher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">TeacherName</ion-label>
+      <ion-input type="text" [(ngModel)]="teacher.TeacherName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">TeacherUserName</ion-label>
+      <ion-input type="text" [(ngModel)]="teacher.UserName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="teacher.Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">TeacherPassword</ion-label>
+      <ion-input type="text" [(ngModel)]="teacher.Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Course</ion-label>
+      <ion-select [(ngModel)]="teacher.Subject">
+        <ion-select-option *ngFor="let course of courses" [value]="course.CourseName">{{course.CourseName}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveTeacher()">Save Teacher</ion-button>
+</ion-content>

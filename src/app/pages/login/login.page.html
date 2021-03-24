@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Login Type</ion-label>
+      <ion-select [(ngModel)]="loginType">
+        <ion-select-option value="Admin">Admin</ion-select-option>
+        <ion-select-option value="Teacher">Teacher</ion-select-option>
+        <ion-select-option value="Student">Student</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input input="text" [(ngModel)]="inputEmail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input input="text" [(ngModel)]="inputPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-button expand="full" (click)="Login()">Login</ion-button>
+  <ion-item>
+    <ion-label></ion-label>
+  </ion-item>
+    <ion-label>Need to Signup?</ion-label>
+    <ion-button expand="full" (click)="Register()">Register Now</ion-button>
+</ion-content>

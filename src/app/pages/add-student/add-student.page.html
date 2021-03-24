@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add Student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">StudentName</ion-label>
+      <ion-input type="text" [(ngModel)]="student.StudentName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentSurname</ion-label>
+      <ion-input type="text" [(ngModel)]="student.StudentSurname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentUserName</ion-label>
+      <ion-input type="text" [(ngModel)]="student.UserName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentPassword</ion-label>
+      <ion-input type="text" [(ngModel)]="student.Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentEmail</ion-label>
+      <ion-input type="text" [(ngModel)]="student.Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentAddress</ion-label>
+      <ion-input type="text" [(ngModel)]="student.Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">StudentContactNo</ion-label>
+      <ion-input type="text" [(ngModel)]="student.ContactNo"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveStudent()" >Save Student</ion-button>
+</ion-content>

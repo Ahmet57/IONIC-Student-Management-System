@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Edit Course By ID</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Course Start Time</ion-label>
+      <ion-input type="text" [(ngModel)]="startTime"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Course End Time</ion-label>
+      <ion-input type="text" [(ngModel)]="endTime"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Context</ion-label>
+      <ion-input type="text" [(ngModel)]="context"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveCourse()">Save Course</ion-button>
+</ion-content>

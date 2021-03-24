@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>View All Courses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="header-row">
+    <ion-col size="1" style="text-align: center;">Course Name</ion-col>
+    <ion-col size="1" style="text-align: center;">Course Fee</ion-col>
+    <ion-col size="1" style="text-align: center;">Course Duration</ion-col>
+    <ion-col size="1" style="text-align: center;"># of Enrolments</ion-col>
+    <ion-col size="2" style="text-align: center;">Enrolled Students</ion-col>
+    <ion-col size="1.5" style="text-align: center;">Start Time</ion-col>
+    <ion-col size="1.5" style="text-align: center;">End Time</ion-col>
+    <ion-col size="2" style="text-align: center;">Context</ion-col>
+    <ion-col size="1" style="text-align: center;">Action</ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let course of courses; let i=index" class="data-row">
+    <ion-col size="1" style="text-align: center;">{{course.CourseName}}</ion-col>
+    <ion-col size="1" style="text-align: center;">{{course.CourseFee}}</ion-col>
+    <ion-col size="1" style="text-align: center;">{{course.Duration}}</ion-col>
+    <ion-col size="1" style="text-align: center;">{{course.NumberOfEnrollments}}</ion-col>
+    <ion-col size="2" style="text-align: center;">{{course.EnrolledStudents}}</ion-col>
+    <ion-col size="1.5" style="text-align: center;">{{course.CourseStartTime}}</ion-col>
+    <ion-col size="1.5" style="text-align: center;">{{course.CourseEndTime}}</ion-col>
+    <ion-col size="2" style="text-align: center;">{{course.Context}}</ion-col>
+    <ion-col size="1" style="text-align: center;">
+      <ion-button size="small" style="font-size: smaller;" (click)="enrollCourse(course)" color="ligth" fill="clear">
+        {{checkIfEnrolled(course) ? 'Disenroll' : 'Enroll'}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

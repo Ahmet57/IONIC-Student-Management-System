@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">TeacherName</ion-label>
+      <ion-input type="text" [(ngModel)]="loginedTeacher.TeacherName" [value]="loginedTeacher.TeacherName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="loginedTeacher.UserName" [value]="loginedTeacher.UserName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="text" [(ngModel)]="loginedTeacher.Password" [value]="loginedTeacher.Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="loginedTeacher.Email" [value]="loginedTeacher.Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Course</ion-label>
+      <ion-select [(ngModel)]="loginedTeacher.Subject">
+        <ion-select-option *ngFor="let course of courses" [value]="course.CourseName">{{course.CourseName}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  <ion-button (click)="EditTeacher()" >Edit Teacher</ion-button>
+  </ion-list>
+</ion-content>

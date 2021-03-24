@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Register Type</ion-label>
+      <ion-select [(ngModel)]="registerType">
+        <ion-select-option value="Teacher">Teacher</ion-select-option>
+        <ion-select-option value="Student">Student</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input input="text" [(ngModel)]="inputEmail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input input="text" [(ngModel)]="inputPassword"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Retype Password</ion-label>
+      <ion-input input="text" [(ngModel)]="inputPassword2"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="Register()">Register</ion-button>
+    <ion-item>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-label>Have an account?</ion-label>
+  <ion-button expand="full" (click)="Login()">Login Now</ion-button>
+  </ion-list>
+</ion-content>
